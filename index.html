@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>振り返りナビ</title>
+  <meta name="description" content="決めた行動を振り返り、次の行動につなげるフロー式振り返りツール">
+  <meta name="theme-color" content="#1f3a68">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="振り返りナビ">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" aria-live="polite"></div>
+  <nav id="tabbar" class="tabbar" aria-label="メインメニュー">
+    <button type="button" data-action="tab" data-tab="home"><span class="tab-ico" aria-hidden="true">🏠</span>ホーム</button>
+    <button type="button" data-action="tab" data-tab="history"><span class="tab-ico" aria-hidden="true">🗂️</span>履歴</button>
+    <button type="button" data-action="tab" data-tab="trends"><span class="tab-ico" aria-hidden="true">📊</span>傾向</button>
+    <button type="button" data-action="tab" data-tab="settings"><span class="tab-ico" aria-hidden="true">⚙️</span>設定</button>
+  </nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="importFile" accept="application/json,.json" hidden>
+
+  <script src="data.js"></script>
+  <script src="vendor/html2canvas.min.js" defer></script>
+  <script src="app.js"></script>
+</body>
+</html>
